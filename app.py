@@ -14,11 +14,11 @@ def home():
 @app.route("/predict", methods=["POST"])
 def predict():
 #specifying our parameters as data type float
-	int_features= [float(x) for x in request.form.values()]
-	final_features= [np.array(int_features)]
-	prediction= model.predict(final_features)
-	output= round(prediction[0], 2)
+    int_features= [float(x) for x in request.form.values()]
+    final_features= [np.array(int_features)]
+    prediction= model.predict(final_features)
+    output= round(prediction[0], 2)
     return render_template("index.html", prediction_text= "flower is {}".format(output))
 #running the flask app
 if __name__= "__main__":
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port=8080, debug=True)
