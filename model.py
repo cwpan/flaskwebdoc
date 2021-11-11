@@ -1,32 +1,44 @@
-#importing the necessary libraries
-from pyforest import *
+# Simple Linear Regression
+
+'''
+This model predicts the brown coal consumption in USA by using simple linear regression model.
+'''
+
+# Importing the libraries
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import pickle
+import requests
+import json
+
+# Importing the dataset
+dataset = pd.read_csv('usa_brown_coal_simplified_all.csv')
+X = dataset.iloc[:, :-1].values
+y = dataset.iloc[:, 1].values
+
+# Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
-from sklearn.svm import SVC
-import joblib
-from sklearn.datasets import load_iris
-#loading the dataset into a pandas dataframe
-data= load_iris()
-data.feature_names
-df= pd.DataFrame(data.data)
-df.head()
-#renaming the columns with the actual column names that is sepal and petal width and length
-df.columns= data.feature_names
-data.target_names
-#inserting the target feature in the dataset
-df["target"]= data.target
-#getting our X and y to feed it into the ML model
-X= df.drop("target", axis=1)
-y= df.target
-#splitting the dataset into train and test
-X_train,X_test,y_train,y_test= train_test_split(X,y, test_size=0.2, random_state=42)
-#loading the SVC model by creating an object of the class
-model= SVC()
-#training the model
-model.fit(X_train,y_train)
-#making predictions
-y_pred= model.predict(X_test)
-#pickling the model
-joblib.dump(model, "model.pkl")
-c= [2,3,3,4]
-from_jb= joblib.load("model.pkl")
-from_jb.predict([c])
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 0)
+
+# Fitting Simple Linear Regression to the Training set
+
+## linear model
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
+
+## random forest model
+#from sklearn.ensemble import RandomForestRegressor
+#regressor = RandomForestRegressor(n_estimators=20, random_state=0)
+
+regressor.fit(X_train, y_train)
+
+# Predicting the Test set results
+y_pred = regressor.predict(X_test)
+
+# Saving model using pickle
+pickle.dump(regressor, open('model.pkl','wb'))
+
+# Loading model to compare the results
+model = pickle.load( open('model.pkl','rb'))
+print(model.predict([[1.8]]))
