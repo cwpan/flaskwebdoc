@@ -1,9 +1,8 @@
-Flask==1.1.2
-pylint
-click
-pytest
-pandas
 numpy
 sklearn
-scipy
-pyforest
+requests
+flask
+gunicorn
+pylint
+matplotlib
+pandas
