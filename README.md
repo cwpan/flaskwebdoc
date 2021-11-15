@@ -12,6 +12,10 @@ This project will be running as MVP to deliver minimum features by leverageing M
 ![image](https://user-images.githubusercontent.com/11746291/141704112-e44b9c79-b9de-4352-b23f-f71b73dc3ae3.png)
 
 # Model
+`model.py` trains and saves the model to disk.
+`model.pkl` is the model in pickle format.
+
+```python
 # Simple Linear Regression
 
 '''
@@ -56,6 +60,8 @@ pickle.dump(regressor, open('model.pkl','wb'))
 # Loading model to compare the results
 model = pickle.load( open('model.pkl','rb'))
 print(model.predict([[1.8]]))
+
+```
 # App 
 
 
