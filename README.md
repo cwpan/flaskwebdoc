@@ -63,7 +63,35 @@ print(model.predict([[1.8]]))
 
 ```
 # App 
+`main.py` has the main function and contains all the required functions for the flask app. Port 8081 and have set debug=True to enable debugging when necessary.
+```python
+import numpy as np
+from flask import Flask, request, jsonify, render_template
+import pickle
 
+app = Flask(__name__)
+model = pickle.load(open('model.pkl', 'rb'))
 
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/predict',methods=['POST'])
+def predict():
+    '''
+    For rendering results on HTML page
+    '''
+    int_features = [int(x) for x in request.form.values()]
+    final_features = [np.array(int_features)]
+    prediction = model.predict(final_features)
+
+    output1 = round(prediction[0], 0)
+    output = int(output1)
+    return render_template('index.html', prediction_text='The coal consumption is {} thousand metric tons.'.format(output))
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8081, debug=True)
+    #app.run()
+```
 
 # CI/CD - Deployment via App Runner
