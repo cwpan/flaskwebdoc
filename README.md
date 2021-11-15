@@ -66,4 +66,4 @@ print(model.predict([[1.8]]))
 
 
 
-# CI/CD - Deployment
+# CI/CD - Deployment via App Runner
