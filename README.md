@@ -94,4 +94,4 @@ if __name__ == "__main__":
     #app.run()
 ```
 
-# CI/CD - Deployment via App Runner
+# CI/CD - Deployment via AWS App Runner
