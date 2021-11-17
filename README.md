@@ -95,6 +95,7 @@ AWS App Runner is an AWS service that provides a fast, simple, and cost-effectiv
 1. Please follow [AWS document links](https://docs.aws.amazon.com/apprunner/latest/dg/getting-started.html) to complete your GitHub repo configuration if you have not done so. 
 2. Configure deployment
 
+![image](https://user-images.githubusercontent.com/11746291/142133556-62ccf331-d1bc-413d-8cd8-5b48619c6a76.png)
 
 
 
