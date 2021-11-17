@@ -45,10 +45,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, rando
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 
-## random forest model
-#from sklearn.ensemble import RandomForestRegressor
-#regressor = RandomForestRegressor(n_estimators=20, random_state=0)
-
 regressor.fit(X_train, y_train)
 
 # Predicting the Test set results
@@ -91,7 +87,6 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8081, debug=True)
-    #app.run()
 ```
 
 # CI/CD - Deployment via AWS App Runner
