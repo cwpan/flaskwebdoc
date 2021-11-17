@@ -90,3 +90,12 @@ if __name__ == "__main__":
 ```
 
 # CI/CD - Deployment via AWS App Runner
+AWS App Runner is an AWS service that provides a fast, simple, and cost-effective way to turn an existing container image or source code directly into a running web service in the AWS Cloud. 
+
+1. Please follow [AWS document links](https://docs.aws.amazon.com/apprunner/latest/dg/getting-started.html) to complete your GitHub repo configuration if you have not done so. 
+2. Configure deployment
+
+
+
+
+
