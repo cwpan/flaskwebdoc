@@ -105,5 +105,7 @@ AWS App Runner is an AWS service that provides a fast, simple, and cost-effectiv
 3. After Service is created successfully, we will able to see the service and its event logs in the service console.
 ![image](https://user-images.githubusercontent.com/11746291/142135558-5f412b1f-235e-4d7f-8fbd-aff466c54287.png)
 
+4. Any code changes committed to the main branch of the GitHub repository will trigger the CI/CD pipeline to refresh the Flask web as a result.
+
 
 
