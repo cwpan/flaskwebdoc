@@ -11,6 +11,14 @@ This project will be running as MVP to deliver minimum features by leverageing M
 # Architecture
 ![image](https://user-images.githubusercontent.com/11746291/141704112-e44b9c79-b9de-4352-b23f-f71b73dc3ae3.png)
 
+# Data Understanding
+By leveraging the Power BI desktop edition, we can even conduct forecast based on the dataset as shown below
+![image](https://user-images.githubusercontent.com/11746291/143153365-9b3feeeb-c4b1-44d7-b115-a695896ea238.png)
+
+# Data Preparation
+Either use the Microsoft ML notebook `energyall.ipynb` or the Google Colab `AllEnergyAnalysis.ipynb` to create US brown coal consumption from the dataset as 
+the input to train the Model.
+
 # Model
 `model.py` trains and saves the model to disk.
 `model.pkl` is the model in pickle format.
