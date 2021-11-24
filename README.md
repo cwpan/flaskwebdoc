@@ -1,6 +1,5 @@
 # Python Flask Energy Consumption Predictor
-In this project, we are going to use a linear regression algorithm  from scikit-learn library to help predict the brown coal consumption based on the historical UN energy statistics dataset. Flask light web framework will be use to deliver the analytic portal to the  public.
-The dataset is from UN energy statistics dataset.
+In this project, we are going to use a linear regression algorithm  from scikit-learn library to help to predict the brown coal consumption based on the historical UN energy statistics dataset. Flask light web framework will be used to deliver the analytic portal to the  public.
 
 [The Project Flaskweb](https://pg3gixvkxm.us-east-2.awsapprunner.com/)
 
@@ -11,8 +10,8 @@ This dataset was kindly published by the United Nations Statistics Division on t
 Per the UNData terms of use: all data and metadata provided on UNdata’s website are available free of charge and may be copied freely, duplicated and further distributed provided that UNdata is cited as the reference.
 
 # Overview
-This project will be running as MVP to deliver minimum features by leverageing Machine learning model. The data process flow has no different with large scale of marchine learning by follow the processes below
-- Data Exporation phase: Power BI Desktop edition was used for data exploration and data clearning. 
+This project will be running as MVP to deliver minimum features by leverageing Machine learning model. The data process flow has no different than the large scale of marchine learning by follow the processes below
+- Data Exploration phase: Power BI Desktop edition was used for data exploration and data clearning. 
 - Data Model Creation: Jupytor note book running on Azure compute node or Google Clab notebook was used
 - Model deployment: AWS app runner 
 
