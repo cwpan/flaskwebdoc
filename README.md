@@ -3,7 +3,7 @@ In this project, we are going to use a linear regression algorithm  from scikit-
 The dataset is from UN energy statistics dataset.
 
 # Acknowledgements
-This dataset was kindly published by the United Nations Statistics Division on the UNData site. You can find the original ![dataset here](http://data.un.org/Explorer.aspx).
+This dataset was kindly published by the United Nations Statistics Division on the UNData site. You can find the original [dataset here](http://data.un.org/Explorer.aspx).
 
 # License
 Per the UNData terms of use: all data and metadata provided on UNdata’s website are available free of charge and may be copied freely, duplicated and further distributed provided that UNdata is cited as the reference.
