@@ -12,7 +12,7 @@ Per the UNData terms of use: all data and metadata provided on UNdata’s websit
 # Overview
 This project will be running as MVP to deliver minimum features by leverageing Machine learning model. The data process flow has no different than the large scale of marchine learning by follow the processes below
 - Data Exploration phase: Power BI Desktop edition was used for data exploration and data clearning. 
-- Data Model Creation: Jupytor note book running on Azure compute node or Google Clab notebook was used
+- Data Model Creation: Jupyter note book running on Azure compute node or Google Colab notebook was used
 - Model deployment: AWS app runner 
 
 # Architecture
