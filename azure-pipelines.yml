@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: 'df9170e4-12ed-498f-93e9-79c1e9b9bd59'
+  azureServiceConnectionId: 'mlmyservice'
   
   # Web app name
   webAppName: 'coalpredict'
@@ -17,7 +17,7 @@ variables:
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'flask-ml-service'
+  environmentName: 'coalpredict'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
