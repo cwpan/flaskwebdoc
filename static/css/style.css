@@ -158,6 +158,30 @@ img {
   margin-top: 30px;
 }
 
+.chart-card {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(13, 25, 38, 0.7);
+}
+
+.chart-card h3 {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.chart-card img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: #f8fafc;
+}
+
 .stat-card {
   padding: 18px 16px;
   border: 1px solid var(--border);
