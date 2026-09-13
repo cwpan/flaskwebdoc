@@ -37,6 +37,7 @@ def build_chart_data_url(prediction_year=None, prediction_value=None):
     data = load_historical_data()
 
     fig, ax = plt.subplots(figsize=(8.5, 4.5))
+
     ax.plot(
         data['year'],
         data['quantity'],
@@ -46,6 +47,20 @@ def build_chart_data_url(prediction_year=None, prediction_value=None):
     )
 
     if prediction_year is not None and prediction_value is not None:
+        last_year = int(data['year'].iloc[-1])
+        last_value = float(data['quantity'].iloc[-1])
+        forecast_years = [last_year, int(prediction_year)]
+        forecast_values = [last_value, float(prediction_value)]
+
+        ax.plot(
+            forecast_years,
+            forecast_values,
+            color='#f59e0b',
+            linewidth=2.2,
+            linestyle='--',
+            label='Projected trend'
+        )
+
         ax.scatter([prediction_year], [prediction_value], color='#f59e0b', s=90, zorder=5)
         ax.annotate(
             f'{int(prediction_year)}: {prediction_value:,}',
@@ -55,7 +70,6 @@ def build_chart_data_url(prediction_year=None, prediction_value=None):
             fontsize=10,
             color='#fcd34d'
         )
-        ax.plot([prediction_year, prediction_year], [0, prediction_value], linestyle='--', color='#f59e0b', alpha=0.5)
 
     ax.set_title('USA Brown Coal Consumption Trend')
     ax.set_xlabel('Year')
